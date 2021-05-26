@@ -1,6 +1,5 @@
 # file_utils
-file_utils
-==========
+
 A small collection of useful tools mostly for LINUX to assist daily work with various kinds of data files and formats.
 
 ### bhist.c
