@@ -8,7 +8,7 @@ Sums up all equal byte values into an array of 256 bins, then builds, stores and
 
 ### memalloc2.c
 Written in C under LINUX.<br/>
-Compile with: `gcc -o memalloc2 memalloc2.c`
+Compile with: `gcc -o memalloc2 memalloc2.c` <br/>
 Simple program using **malloc()** to claim/release large dynamic memory chunks in a timer controlled way.
 Used in conjunction with bash script **memalloc2_reg.sh** and for testing methods to limit memory usage of single processes.
 
