@@ -11,6 +11,8 @@ Written in C under LINUX.<br/>
 Compile with: `gcc -o memalloc2 memalloc2.c` <br/>
 Simple program using **malloc()** to claim/release large dynamic memory chunks in a timer controlled way.
 Used in conjunction with bash script **memalloc2_reg.sh** and for testing methods to limit memory usage of single processes.
+Useful also to investigate the way the Operating system is managing free memory resources.
 
 ### memalloc2_reg.sh
-bash script for usage in conjunction with **memalloc2.c** to record memory usage of program **memalloc2** .
+bash script for usage in conjunction with **memalloc2.c** to record memory usage of program **memalloc2** <br/>
+File **memalloc2_plt.dat** will be written holding variation in time of memory consumption and free available memory.
