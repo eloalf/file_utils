@@ -12,8 +12,10 @@ Compile with: `gcc -o memalloc2 memalloc2.c` <br/>
 Simple program using **calloc()** to claim/release large dynamic memory chunks in a timer controlled way.
 Used in conjunction with bash script **memalloc2_reg.sh** to record memory usage.
 Useful also to investigate the way the Operating system is managing free memory resources and for testing methods to limit memory usage.
-Max. memory consumption is 2 GB, runtime is 140s .
+Max. memory consumption is 2 GB, runtime is 140s .<br/>
+Run without arguments: `./memalloc2`
 
 ### memalloc2_reg.sh
 bash script for usage in conjunction with **memalloc2.c** to record memory usage of program **memalloc2** <br/>
-File **memalloc2_plt.dat** will be written holding variation in time of memory consumption and free available memory.
+File **memalloc2_plt.dat** will be written holding variation in time of memory consumption and free available memory.<br/>
+Run without arguments: `./memalloc2_reg.sh`
