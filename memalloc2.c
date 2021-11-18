@@ -1,11 +1,9 @@
 
 /* memalloc2.c                                                                                          */
-/* A. Schmiedl , FAU / Biochemistry Division , 2021-11-17 / 2021-11-18                                  */
+/* A. Schmiedl , FAU / Biochemistry Division , 2021-11-18                                               */
 /* Using calloc() to claim/release large dynamic memory in big chunks                                   */
 /* malloc() would reserve but not use up memory unless you actually put data into it (lazy allocation), */
-/* even calloc() doesn't garantee to use up the RAM, so actually fill it with random data. Read:        */
-/* https://stackoverflow.com/questions/19991623/why-is-malloc-not-using-up-the-memory-on-my-computer    */
-/* https://www.thegeekdiary.com/understanding-proc-meminfo-file-analyzing-memory-utilization-in-linux/  */
+/* even calloc() doesn't garantee to use up the RAM, so actually fill it with random data.              */
 /* Use in conjunction with bash script memalloc2_reg.sh                                                 */
 
 #define  BNUM  100000000                         /* number of bytes to allocate per memory block: 100M  */
