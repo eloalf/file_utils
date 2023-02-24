@@ -26,8 +26,7 @@ Demonstration of how to use the Pi's framebuffer for plotting graphical elements
 Read source code to learn how to create a graphical text block, switch to a GUI-less bash terminal with key combination `<Ctrl><Alt><F1>` and run a command like  `./rpi_framebuffer 100 10 1820 10 50 50 250`  which draws a rectangular block (100 px wide, 10 px high) with it's top left corner at 1820 px from left and 10 px from top and color values 1/4 red 1/4 green 1/1 blue.<br/>
 Switch back to graphical desktop with `<Ctrl><Alt><F7>` <br/>
 A graphical block of text in RGB565 16-bit pixel format needs to be prepared in advance with commands (**ImageMagick** and *FFmpeg** required) like:<br/>
-`convert -background black -fill lightgreen -font FreeMono-Bold -pointsize 28 label:"the quick brown fox ...\n0123456789-123456789..." textimg.png`
-`identify textimg.png`
-    `textimg.png PNG 392x59 392x59+0+0 16-bit sRGB 9393B 0.010u 0:00.000`
-`display textimg.png`
-`ffmpeg -vcodec png -i textimg.png -vcodec rawvideo -f rawvideo -pix_fmt rgb565 textimg_raw.rgb565`
+`convert -background black -fill lightgreen -font FreeMono-Bold -pointsize 28 label:"the quick brown fox ...\n0123456789-123456789..." textimg.png` <br/>
+`identify textimg.png` <br/>
+`display textimg.png` <br/>
+`ffmpeg -vcodec png -i textimg.png -vcodec rawvideo -f rawvideo -pix_fmt rgb565 textimg_raw.rgb565` <br/>
