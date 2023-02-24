@@ -27,7 +27,7 @@ Read source code to learn how to create a graphical text block, switch to a GUI-
 Switch back to graphical desktop with `<Ctrl><Alt><F7>` .<br/>
 A graphical block of text in RGB565 16-bit pixel format needs to be prepared in advance using a command sequence (**ImageMagick** and **FFmpeg** are required) like:<br/>
 `convert -background black -fill lightgreen -font FreeMono-Bold -pointsize 28 \` <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;  `label:"the quick brown fox ...\n0123456789-123456789..." textimg.png` <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `label:"the quick brown fox ...\n0123456789-123456789..." textimg.png` <br/>
 `identify textimg.png` <br/>
 `display textimg.png` <br/>
 `ffmpeg -vcodec png -i textimg.png -vcodec rawvideo -f rawvideo -pix_fmt rgb565 textimg_raw.rgb565` <br/>
