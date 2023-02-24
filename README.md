@@ -25,7 +25,7 @@ Written in C under PiOS (*Raspios Buster*) on and for a **Raspberry-Pi 4**.
 Demonstration of how to use the Pi's framebuffer for plotting graphical elements and text without the use of a graphical desktop environment.<br/>
 Read source code to learn how to create a graphical text block, switch to a GUI-less bash terminal with key combination `<Ctrl><Alt><F1>` and run a command like  `./rpi_framebuffer 100 10 1820 10 50 50 250`  which draws a rectangular block (100 px wide, 10 px high) with it's top left corner at 1820 px from left and 10 px from top and color values 1/4 red 1/4 green 1/1 blue.<br/>
 Switch back to graphical desktop with `<Ctrl><Alt><F7>` .<br/>
-A graphical block of text in RGB565 16-bit pixel format needs to be prepared in advance using a command sequence (**ImageMagick** and **FFmpeg** are required) like:<br/>
+A graphical block of text in RGB565 16-bit pixel format needs to be prepared in advance using a command sequence (&nbsp;**ImageMagick** and **FFmpeg** are required) like:<br/>
 `convert -background black -fill lightgreen -font FreeMono-Bold -pointsize 28 \` <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  `label:"the quick brown fox ...\n0123456789-123456789..." textimg.png` <br/>
 `identify textimg.png` <br/>
