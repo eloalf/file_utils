@@ -31,6 +31,6 @@ A graphical block of text in RGB565 16-bit pixel format needs to be prepared in 
 `identify textimg.png` <br/>
 `display textimg.png` <br/>
 `ffmpeg -vcodec png -i textimg.png -vcodec rawvideo -f rawvideo -pix_fmt rgb565 textimg_raw.rgb565` <br/>
-The `identify` command print the pixel dimensions of the image, which need to be entered into the source code, then compile with: <br/>
+The `identify` command prints the pixel dimensions of the image, which need to be entered into the source code, then compile with: <br/>
 `gcc -o rpi_framebuffer rpi_framebuffer.c` <br/>
 
