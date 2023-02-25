@@ -16,7 +16,7 @@ Max. memory consumption is 2 GB, runtime is 140s .<br/>
 Run without arguments: `./memalloc2`
 
 ### memalloc2_reg.sh
-bash script for usage in conjunction with **memalloc2.c** to record memory usage of program **memalloc2** . <br/>
+bash script for use in conjunction with **memalloc2.c** to record memory usage of program **memalloc2** . <br/>
 A file **memalloc2_plt.dat** will be created holding a time course of memory consumption and free available memory.<br/>
 Run without arguments before (!) starting **memalloc2** : `./memalloc2_reg.sh`
 
