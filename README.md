@@ -10,14 +10,15 @@ Sums up all equal byte values into an array of 256 bins, then builds, stores and
 Written in C under LINUX.<br/>
 Compile with: `gcc -o memalloc2 memalloc2.c` <br/>
 Simple program using **calloc()** to claim/release large dynamic memory chunks in a timer controlled way.
-Used in conjunction with bash script **memalloc2_reg.sh** to record memory usage. A simple memory tester is included by comparing the contents of 2 adjacent blocks.
+Used in conjunction with bash script **memalloc2_reg.sh** to record memory usage. A simple memory tester is included by comparing the contents of every other block.
 Useful also to learn about the way the Operating system is managing free memory resources and for testing methods to limit memory usage.
-Max. memory consumption is 2 GB, runtime is 140s .<br/>
+Maximum memory consumption is 4 GB, runtime is 284s .<br/>
 Run without arguments: `./memalloc2`
 
 ### memalloc2_reg.sh
 bash script for use in conjunction with **memalloc2.c** to record memory usage of program **memalloc2** . <br/>
 A file **memalloc2_plt.dat** will be created holding a time course of memory consumption and free available memory.<br/>
+It proposes 2 commands to visualize the result with **gnuplot** .<br/>
 Run without arguments before (!) starting **memalloc2** : `./memalloc2_reg.sh`
 
 ### rpi_framebuffer.c
