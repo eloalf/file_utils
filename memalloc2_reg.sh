@@ -2,11 +2,11 @@
 #!/bin/bash
 # memalloc2_reg.sh
 # Store memory usage of program 'memalloc2' as well as available memory in 1s increments into log file 'memalloc2_plt.dat'
-# Used in conjunction with program 'memalloc2' (compiled 'memalloc2.c')
-# A. Schmiedl, FAU / Biochemistry Division, 2021-11-17 / 2021-11-18
+# Used in conjunction with program 'memalloc2.c' , start without arguments. Sample rate is 1 Hz
+# A. Schmiedl, FAU / Biochemistry Division, 2021-11-18 / 2023-03-22
 
 # Wait for file 'memalloc2_started' marking the start of program 'memalloc2.c' :
-echo "Waiting for 'memalloc2.c' to start ..."
+echo "Waiting for 'memalloc2' to start ..."
 until [ -f memalloc2_started ]
 do
      sleep 0.1
@@ -48,7 +48,8 @@ done
 perl -pe 's/K//g' memalloc2_mem.dat | awk 'NF==3{print}' > memalloc2_plt.dat
 rm memalloc2_mem.dat
 echo "End time of recording   = $(date)"
-echo $(wc memalloc2_plt.dat | awk '{print $1, "entries have been recorded into file memalloc2_plt.dat "}')
-echo "File memalloc2_plt.dat contains seconds + KB values + free usable RAM, may be plotted with command: "
+echo $(wc memalloc2_plt.dat | awk '{print $1, "records have been written into file memalloc2_plt.dat "}')
+echo "File memalloc2_plt.dat contains 3 columns with: seconds , KB values , free usable RAM ; it may be visualized with gnuplot: "
 echo "gnuplot --persist -e \"set grid ; set title 'process memory KB' ;   plot 'memalloc2_plt.dat' using 1:2 with lines\" "
 echo "gnuplot --persist -e \"set grid ; set title 'available memory KB' ; plot 'memalloc2_plt.dat' using 1:3 with lines\" "
+
