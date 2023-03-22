@@ -4,15 +4,15 @@ A small collection of (more or less) useful tools for LINUX to assist daily work
 
 ### bhist.c
 Written in C under LINUX.<br/>
-Sums up all equal byte values into an array of 256 bins, then builds, stores and launches a gnuplot script for logarithmic display of the histogram data. Requires an installation of gnuplot. Look up comment lines in source code (in German) for more information.
+Sums up all equal byte values into an array of 256 bins, then builds, stores and launches a **gnuplot** script for logarithmic display of the histogram data. Requires an installation of **gnuplot**. Look up comment lines in source code (in German) for more information.
 
 ### memalloc2.c
 Written in C under LINUX.<br/>
 Compile with: `gcc -o memalloc2 memalloc2.c` <br/>
-Simple program using **calloc()** to claim/release large dynamic memory chunks in a timer controlled way.
+Simple program using **calloc()** to claim/release large dynamic memory chunks in a timed sequence.
 Used in conjunction with bash script **memalloc2_reg.sh** to record memory usage. A simple memory tester is included by comparing the contents of every other block.
 Useful also to learn about the way the operating system is managing free memory resources and for testing methods to limit memory usage.
-Edit `#define` lines with values `BNUM` and `BLKS` prior to compilation to change amount of allocated memory. Preset is a memory consumption
+Edit two `#define` lines with values `BNUM` and `BLKS` prior to compilation to change amount of allocated memory, preset is a memory consumption
 of 4 GB with resulting runtime of 284s .<br/>
 Run without arguments: `./memalloc2`
 
