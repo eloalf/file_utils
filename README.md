@@ -11,7 +11,7 @@ Written in C under LINUX.<br/>
 Compile with: `gcc -o memalloc2 memalloc2.c` <br/>
 Simple program using **calloc()** to claim/release large dynamic memory chunks in a timer controlled way.
 Used in conjunction with bash script **memalloc2_reg.sh** to record memory usage. A simple memory tester is included by comparing the contents of every other block.
-Useful also to learn about the way the Operating system is managing free memory resources and for testing methods to limit memory usage.
+Useful also to learn about the way the operating system is managing free memory resources and for testing methods to limit memory usage.
 Edit `#define` lines with values `BNUM` and `BLKS` prior to compilation to change amount of allocated memory. Preset is a memory consumption
 of 4 GB with resulting runtime of 284s .<br/>
 Run without arguments: `./memalloc2`
