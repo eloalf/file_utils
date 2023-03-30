@@ -1,16 +1,17 @@
 
 /* memalloc2.c                                                                                          */
-/* A. Schmiedl , FAU / Biochemistry Division , 2021-11-30 / 2023-03-22                                  */
+/* A. Schmiedl , FAU / Biochemistry Division , 2021-11-30 / 2023-03-30                                  */
 /* Using calloc() to iteratively claim/release large dynamic memory chunks.                             */
 /* malloc() would reserve but not use up memory unless you actually put data into it (lazy allocation), */
-/* even calloc() doesn't garantee to use up the RAM, so actually fill it with random data.              */
+/* even calloc() doesn't garantee to use up the RAM, so actively fill it with random data.              */
 /* For every next block, store inverted bytes from the previous one, and compare before releasing it,   */
-/* which is a kind of poor man's memory tester.                                                         */
+/* which is a kind of "poor man's memory tester".                                                       */
 /* Learn more:                                                                                          */
 /* https://stackoverflow.com/questions/19991623/why-is-malloc-not-using-up-the-memory-on-my-computer    */
 /* https://www.thegeekdiary.com/understanding-proc-meminfo-file-analyzing-memory-utilization-in-linux/  */
 /* Prior to compile and run set BLKS and BNUM which will allocate BLKS*BNUM bytes.                      */
-/* Use in conjunction with bash script memalloc2_reg.sh which needs to be started in advance.           */
+/* Use in conjunction with bash script 'memalloc2_reg.sh' which needs to be started in advance, and     */
+/* with 'memalloc2_proc.gp' + 'memalloc2_free.gp' if live monitoring required.                          */
 
 #define  BNUM  100000000                         /* number of bytes to allocate per memory block: 100M  */
 #define  BLKS  40                                 /* number of blocks with size BNUM bytes to allocate  */
@@ -32,10 +33,11 @@ int main () {
                                            /* Memory allocation on the heap in a time controlled loop:  */
     printf("--> Allocate %d*%d bytes of memory block by block in 4s time increments:  \n", BLKS, BNUM);
     printf("    Monitoring examples:  \n");
-    printf("      Get PID of process with:  ps -ea | grep memalloc2  \n");
-    printf("      Print memory usage with:  pmap <pid> | tail -n 1 | awk '/total/{print $2}'  \n");
-    printf("      Print available memory:   awk '/MemAvailable/ {print $2,$3}' /proc/meminfo  \n");
-    printf("    Automated monitoring with script 'memalloc2_reg.sh': start before 'memalloc2'  \n");
+    printf("        Get PID of process with:  ps -ea | grep memalloc2  \n");
+    printf("        Print memory usage with:  pmap <pid> | tail -n 1 | awk '/total/{print $2}'     \n");
+    printf("        Print available memory:   awk '/MemAvailable/ {print $2,$3}' /proc/meminfo     \n");
+    printf("    Logging memory usage with script 'memalloc2_reg.sh', start before './memalloc2',   \n");
+    printf("        'memalloc2_proc.gp' and 'memalloc2_free.gp' could be used for live monitoring. \n");
 
     srand(time(0));                                                /* Seed the random number generator  */
 
