@@ -1,6 +1,6 @@
 # file_utils
 
-A small collection of (more or less) useful tools for LINUX to assist daily work with data, files, formats and system resources and to explore functions and capabilities of LINUX.
+A small collection of (more or less) useful tools for LINUX to assist daily work with data, files, object formats, system resources and to explore functions and capabilities of LINUX.
 
 ### bhist.c
 Written in C under LINUX.<br/>
