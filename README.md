@@ -17,10 +17,10 @@ of 4 GB with resulting runtime of 284s .<br/>
 Run without arguments: `./memalloc2`
 
 ### memalloc2_reg.sh
-bash script for use in conjunction with **memalloc2.c** to record memory usage of program **memalloc2** . <br/>
-A file **memalloc2_plt.dat** will be created holding a time course of memory consumption and free available memory.<br/>
-It proposes 2 commands to visualize the result with **gnuplot** .<br/>
-Run without arguments before (!) starting **memalloc2** : `./memalloc2_reg.sh`
+bash script for use with **memalloc2.c** to record memory usage of program **memalloc2** . <br/>
+A data file **memalloc2_plt.dat** will be created holding a time course of memory consumption and free available memory.<br/>
+Run without arguments before (!) starting **memalloc2** : `./memalloc2_reg.sh` .<br/>
+Live visualization could be performed with **gnuplot** scripts `./memalloc2_proc.gp` and `./memalloc2_free.gp` started after the bash script.<br/>
 
 ### rpi_framebuffer.c
 Written in C under PiOS (*Raspios Buster*) on and for a **Raspberry-Pi 4**.
