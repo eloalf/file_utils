@@ -16,7 +16,7 @@ Edit two `#define` lines with values `BNUM` and `BLKS` prior to compilation to c
 of 4 GB with resulting runtime of 284s .<br/>
 Run without arguments: `./memalloc2`
 
-### memalloc2_reg.sh , memalloc2_*.gp
+### memalloc2_reg.sh
 bash script for use with **memalloc2.c** to record memory usage of program **memalloc2** . <br/>
 A data file **memalloc2_plt.dat** will be created holding a time course of memory consumption and free available memory.<br/>
 Run without arguments before (!) starting **memalloc2** : `./memalloc2_reg.sh` .<br/>
